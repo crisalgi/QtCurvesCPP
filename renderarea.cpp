@@ -43,6 +43,9 @@ QPointF RenderArea::compute(float t){
     case Astroid:
        return compute_astroid(t);
         break;
+    case Line:
+       return compute_line(t);
+        break;
     }
 }
 
@@ -68,28 +71,40 @@ QPointF RenderArea::compute_hypocycloid(float t){
     );
 }
 
+QPointF RenderArea::compute_line(float t){
+    return QPointF(
+                1-t,
+                1-t
+    );
+}
+
 void RenderArea::on_shape_changed(){
 
     switch (mShape) {
 
-    case RenderArea::Cycloid:
+    case Cycloid:
             mScale = 4;
             mIntervalLength = 6 * M_PI;
             mStepCount = 128;
         break;
-    case RenderArea::HypoCycloid:
+    case HypoCycloid:
             mScale = 15;
             mIntervalLength = 2 * M_PI;
             mStepCount = 256;
          break;
-    case RenderArea::HuygensCycloid:
+    case HuygensCycloid:
             mScale = 4;
             mIntervalLength = 4 * M_PI;
             mStepCount = 256;
         break;
-    case RenderArea::Astroid:
+    case Astroid:
            mScale = 40;
            mIntervalLength = 2 * M_PI;
+           mStepCount = 256;
+        break;
+    case Line:
+           mScale = 50;
+           mIntervalLength = 1;
            mStepCount = 256;
         break;
     }
@@ -111,7 +126,10 @@ void RenderArea::paintEvent(QPaintEvent *event)
    painter.drawRect(this->rect());
 
    QPoint center = this->rect().center();
-
+   QPointF prevPoint = compute(0);
+   QPoint prevPixel;
+   prevPixel.setX(prevPoint.x() * mScale + center.x());
+   prevPixel.setY(prevPoint.y() * mScale + center.y());
    float step = mIntervalLength / mStepCount;
 
    for(float t = 0; t< mIntervalLength; t += step){
@@ -119,7 +137,9 @@ void RenderArea::paintEvent(QPaintEvent *event)
        QPoint pixel;
        pixel.setX(point.x() * mScale + center.x());
        pixel.setY(point.y() * mScale + center.y());
-       painter.drawPoint(pixel);
+       //painter.drawPoint(pixel);
+       painter.drawLine(pixel, prevPixel);
+       prevPixel = pixel;
    }
 }
 

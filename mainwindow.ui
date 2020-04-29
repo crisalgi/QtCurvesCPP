@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Curves</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="">
@@ -54,6 +54,13 @@
         <widget class="QPushButton" name="btnHypoCycloid">
          <property name="text">
           <string>Hypo Cycloid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnLine">
+         <property name="text">
+          <string>Line</string>
          </property>
         </widget>
        </item>
