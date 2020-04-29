@@ -17,7 +17,7 @@ public:
     void setBackgroundColor(QColor color) {mBackgroundColor = color; }
     QColor getBackgroundColor() const {return mBackgroundColor; }
 
-    void setShape (ShapeType shape){mShape = shape;}
+    void setShape (ShapeType shape){mShape = shape; on_shape_changed();}
     ShapeType getShape ()const {return mShape;}
 
 protected:
@@ -26,10 +26,18 @@ protected:
 signals:
 
 private:
+    QPointF compute_cycloid(float);
+    QPointF compute_hypocycloid(float);
+    QPointF compute_huygens(float);
+    QPointF compute(float);
     QColor mBackgroundColor;
     QColor mShapeColor;
     ShapeType mShape;
-    QPointF compute_astroid(float t);
+    QPointF compute_astroid(float);
+    void on_shape_changed();
+    int mScale;
+    int mStepCount;
+    float mIntervalLength;
 };
 
 #endif // RENDERAREA_H
