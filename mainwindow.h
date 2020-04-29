@@ -26,6 +26,14 @@ private slots:
 
     void on_btnLine_clicked();
 
+    void on_spinScale_valueChanged(double arg1);
+
+    void update_ui();
+
+    void on_spinInterval_valueChanged(double arg1);
+
+    void on_spinCount_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

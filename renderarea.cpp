@@ -81,7 +81,6 @@ QPointF RenderArea::compute_line(float t){
 void RenderArea::on_shape_changed(){
 
     switch (mShape) {
-
     case Cycloid:
             mScale = 4;
             mIntervalLength = 6 * M_PI;
@@ -116,11 +115,8 @@ void RenderArea::paintEvent(QPaintEvent *event)
    QPainter painter(this);
 
    painter.setRenderHint(QPainter::Antialiasing, true);
-
-
-
-    painter.setPen(mShapeColor);
-    painter.setBrush(mBackgroundColor);
+   painter.setPen(mShapeColor);
+   painter.setBrush(mBackgroundColor);
 
    //drawing area
    painter.drawRect(this->rect());
@@ -137,9 +133,10 @@ void RenderArea::paintEvent(QPaintEvent *event)
        QPoint pixel;
        pixel.setX(point.x() * mScale + center.x());
        pixel.setY(point.y() * mScale + center.y());
-       //painter.drawPoint(pixel);
        painter.drawLine(pixel, prevPixel);
        prevPixel = pixel;
    }
 }
+
+
 

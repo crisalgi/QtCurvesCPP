@@ -19,6 +19,13 @@ public:
 
     void setShape (ShapeType shape){mShape = shape; on_shape_changed();}
     ShapeType getShape ()const {return mShape;}
+    void setScale(float scale){mScale = scale; repaint();}
+    float getScale() const {return mScale;}
+
+    void setInterval(float interval){mIntervalLength = interval; repaint();}
+    float getInterval() const {return mIntervalLength;}
+    void setStepCount(int count){mStepCount = count; repaint();}
+    int getStepCount() const {return mStepCount;}
 
 protected:
     void paintEvent(QPaintEvent *event) override;
@@ -26,6 +33,7 @@ protected:
 signals:
 
 private:
+    void update_ui();
     QPointF compute_cycloid(float);
     QPointF compute_hypocycloid(float);
     QPointF compute_huygens(float);
