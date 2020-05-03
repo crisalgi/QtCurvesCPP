@@ -20,168 +20,186 @@
    <string>Curves</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="RenderArea" name="renderArea" native="true">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>11</y>
-      <width>231</width>
-      <height>221</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnAstroid">
-    <property name="geometry">
-     <rect>
-      <x>323</x>
-      <y>15</y>
-      <width>80</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Astroid</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnCycloid">
-    <property name="geometry">
-     <rect>
-      <x>323</x>
-      <y>46</y>
-      <width>80</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cycloid</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnHuygens">
-    <property name="geometry">
-     <rect>
-      <x>323</x>
-      <y>77</y>
-      <width>80</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Huygens</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnHypoCycloid">
-    <property name="geometry">
-     <rect>
-      <x>323</x>
-      <y>108</y>
-      <width>94</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Hypo Cycloid</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnLine">
-    <property name="geometry">
-     <rect>
-      <x>323</x>
-      <y>139</y>
-      <width>80</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Line</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>180</y>
-      <width>106</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Scale</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDoubleSpinBox" name="spinScale">
-       <property name="decimals">
-        <number>1</number>
-       </property>
-       <property name="singleStep">
-        <double>0.100000000000000</double>
-       </property>
-       <property name="value">
-        <double>40.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>220</y>
-      <width>179</width>
-      <height>28</height>
+      <y>15</y>
+      <width>181</width>
+      <height>253</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QPushButton" name="btnAstroid">
        <property name="text">
-        <string>Interval Length</string>
+        <string>Astroid</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="spinInterval">
-       <property name="maximum">
-        <double>100.000000000000000</double>
-       </property>
-       <property name="singleStep">
-        <double>0.100000000000000</double>
+      <widget class="QPushButton" name="btnCycloid">
+       <property name="text">
+        <string>Cycloid</string>
        </property>
       </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnHuygens">
+       <property name="text">
+        <string>Huygens</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnHypoCycloid">
+       <property name="text">
+        <string>Hypo Cycloid</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnLine">
+       <property name="text">
+        <string>Line</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Scale</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="spinScale">
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>40.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Interval Length</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="spinInterval">
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <double>100.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Step Count</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinCount">
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+         <property name="singleStep">
+          <number>8</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>250</y>
-      <width>132</width>
-      <height>28</height>
+      <x>10</x>
+      <y>10</y>
+      <width>271</width>
+      <height>331</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Step Count</string>
-       </property>
-      </widget>
+      <widget class="RenderArea" name="renderArea" native="true"/>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinCount">
-       <property name="maximum">
-        <number>512</number>
-       </property>
-       <property name="singleStep">
-        <number>8</number>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="btnBackground">
+         <property name="text">
+          <string>Background</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnPen">
+         <property name="text">
+          <string>Line Color</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
