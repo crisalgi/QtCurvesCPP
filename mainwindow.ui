@@ -70,9 +70,9 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>16</y>
+      <y>17</y>
       <width>169</width>
-      <height>284</height>
+      <height>315</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -115,6 +115,13 @@
       <widget class="QPushButton" name="btnCircle">
        <property name="text">
         <string>Circle</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEllipse">
+       <property name="text">
+        <string>Ellipse</string>
        </property>
       </widget>
      </item>

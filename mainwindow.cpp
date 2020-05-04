@@ -92,3 +92,10 @@ void MainWindow::on_btnCircle_clicked()
     this->ui->renderArea->repaint(this->rect());
     update_ui();
 }
+
+void MainWindow::on_btnEllipse_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::Ellipse);
+    this->ui->renderArea->repaint(this->rect());
+    update_ui();
+}
