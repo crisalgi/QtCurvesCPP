@@ -106,3 +106,10 @@ void MainWindow::on_btnFancy_clicked()
     this->ui->renderArea->repaint(this->rect());
     update_ui();
 }
+
+void MainWindow::on_btnStarfish_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::Starfish);
+    this->ui->renderArea->repaint(this->rect());
+    update_ui();
+}

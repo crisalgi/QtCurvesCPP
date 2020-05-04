@@ -12,7 +12,7 @@ public:
     QSize minimumSizeHint() const override;
     QSize sizeHint() const override;
 
-    enum ShapeType{Astroid, Cycloid, HuygensCycloid, HypoCycloid, Line, Circle, Ellipse, Fancy };
+    enum ShapeType{Astroid, Cycloid, HuygensCycloid, HypoCycloid, Line, Circle, Ellipse, Fancy, Starfish };
 
     void setBackgroundColor(QColor color) {mBackgroundColor = color; }
     QColor getBackgroundColor() const {return mBackgroundColor; }
@@ -26,8 +26,8 @@ public:
 
     void setInterval(float interval){mIntervalLength = interval; repaint();}
     float getInterval() const {return mIntervalLength;}
-    void setStepCount(int count){mStepCount = count; repaint();}
-    int getStepCount() const {return mStepCount;}
+    void setStepCount(float count){mStepCount = count; repaint();}
+    float getStepCount() const {return mStepCount;}
 
 protected:
     void paintEvent(QPaintEvent *event) override;
@@ -43,14 +43,15 @@ private:
     QPointF compute_circle(float);
     QPointF compute_ellipse(float);
     QPointF compute_fancy(float);
+    QPointF compute_Starfish(float);
     QPointF compute(float);
     QColor mBackgroundColor;
     QColor mShapeColor;
     ShapeType mShape;
     QPointF compute_astroid(float);
     void on_shape_changed();
-    int mScale;
-    int mStepCount;
+    float mScale;
+    float mStepCount;
     float mIntervalLength;
 };
 
