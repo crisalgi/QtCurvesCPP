@@ -12,7 +12,7 @@ public:
     QSize minimumSizeHint() const override;
     QSize sizeHint() const override;
 
-    enum ShapeType{Astroid, Cycloid, HuygensCycloid, HypoCycloid, Line };
+    enum ShapeType{Astroid, Cycloid, HuygensCycloid, HypoCycloid, Line, Circle };
 
     void setBackgroundColor(QColor color) {mBackgroundColor = color; }
     QColor getBackgroundColor() const {return mBackgroundColor; }
@@ -40,6 +40,7 @@ private:
     QPointF compute_hypocycloid(float);
     QPointF compute_huygens(float);
     QPointF compute_line(float);
+    QPointF compute_circle(float);
     QPointF compute(float);
     QColor mBackgroundColor;
     QColor mShapeColor;

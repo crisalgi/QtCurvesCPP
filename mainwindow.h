@@ -38,6 +38,8 @@ private slots:
 
     void on_btnPen_clicked();
 
+    void on_btnCircle_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

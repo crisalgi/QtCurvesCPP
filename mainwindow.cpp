@@ -85,3 +85,10 @@ void MainWindow::on_btnPen_clicked()
     this->ui->renderArea->setShapeColor(color);
     this->ui->renderArea->repaint();
 }
+
+void MainWindow::on_btnCircle_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::Circle);
+    this->ui->renderArea->repaint(this->rect());
+    update_ui();
+}
