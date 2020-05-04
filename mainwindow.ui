@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>484</width>
-    <height>363</height>
+    <width>520</width>
+    <height>431</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,9 +23,9 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>271</width>
+      <x>20</x>
+      <y>20</y>
+      <width>291</width>
       <height>331</height>
      </rect>
     </property>
@@ -69,10 +69,10 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>17</y>
+      <x>340</x>
+      <y>8</y>
       <width>169</width>
-      <height>315</height>
+      <height>346</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -122,6 +122,13 @@
       <widget class="QPushButton" name="btnEllipse">
        <property name="text">
         <string>Ellipse</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnFancy">
+       <property name="text">
+        <string>Fancy</string>
        </property>
       </widget>
      </item>

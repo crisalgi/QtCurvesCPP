@@ -45,6 +45,14 @@ QPointF RenderArea::compute_ellipse(float t){
     return QPointF(x,y);
 }
 
+QPointF RenderArea::compute_fancy(float t){
+    float cos_t = 11.0f*cos(t)-6.0f*(cos(11*t/6));
+    float sin_t = 11.0f*sin(t)-6*sin(11*t/6);
+    float x = cos_t;
+    float y = sin_t;
+    return QPointF(x,y);
+}
+
 QPointF RenderArea::compute(float t){
     switch (mShape) {
     case Cycloid:
@@ -67,6 +75,9 @@ QPointF RenderArea::compute(float t){
         break;
     case Ellipse:
        return compute_ellipse(t);
+        break;
+    case Fancy:
+       return compute_fancy(t);
         break;
 
     }
@@ -135,9 +146,14 @@ void RenderArea::on_shape_changed(){
         mStepCount = 128;
         break;
     case Ellipse:
-        mScale = 75;
+        mScale = 70;
         mIntervalLength = 2 * M_PI;
         mStepCount = 256;
+        break;
+    case Fancy:
+        mScale = 8.9;
+        mIntervalLength = 12 * M_PI;
+        mStepCount = 512;
         break;
     }
 }
