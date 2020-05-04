@@ -2,7 +2,8 @@
 #define RENDERAREA_H
 
 #include <QWidget>
-#include<QColor>
+#include <QColor>
+#include <QPen>
 class RenderArea : public QWidget
 {
     Q_OBJECT
@@ -16,8 +17,8 @@ public:
 
     void setBackgroundColor(QColor color) {mBackgroundColor = color; }
     QColor getBackgroundColor() const {return mBackgroundColor; }
-    void setShapeColor(QColor color) {mShapeColor = color; }
-    QColor getShapeColor() const {return mShapeColor; }
+    void setShapeColor(QColor color) {mPen.setColor(color); }
+    QColor getShapeColor() const {return mPen.color(); }
 
     void setShape (ShapeType shape){mShape = shape; on_shape_changed();}
     ShapeType getShape ()const {return mShape;}
@@ -46,8 +47,8 @@ private:
     QPointF compute_Starfish(float);
     QPointF compute(float);
     QColor mBackgroundColor;
-    QColor mShapeColor;
     ShapeType mShape;
+    QPen mPen;
     QPointF compute_astroid(float);
     void on_shape_changed();
     float mScale;
