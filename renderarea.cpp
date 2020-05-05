@@ -53,9 +53,9 @@ QPointF RenderArea::compute_starfish(float t){
     return QPointF(x,y);
 }
 
-QPointF RenderArea::compute_cloud(float t){
+QPointF RenderArea::compute_cloud(float t, int sign){
     float a = 14, b=1;
-    float x = (a+b)*cos(t*b/a)-b*cos(t*(a+b)/a);
+    float x = (a+b)*cos(t*b/a)-sign*b*cos(t*(a+b)/a);
     float y = (a+b)*sin(t*b/a)-b*sin(t*(a+b)/a);
     return QPointF(x,y);
 }
@@ -98,7 +98,10 @@ QPointF RenderArea::compute(float t){
        return compute_starfish(t);
         break;
     case Cloud:
-       return compute_cloud(t);
+       return compute_cloud(t,1);
+        break;
+    case ReverseCloud:
+       return compute_cloud(t,-1);
         break;
 
     }
@@ -182,6 +185,11 @@ void RenderArea::on_shape_changed(){
         mStepCount = 256;
         break;
     case Cloud:
+        mScale = 10;
+        mIntervalLength = 28 * M_PI;
+        mStepCount = 128;
+        break;
+    case ReverseCloud:
         mScale = 10;
         mIntervalLength = 28 * M_PI;
         mStepCount = 128;

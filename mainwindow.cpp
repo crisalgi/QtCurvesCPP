@@ -120,3 +120,10 @@ void MainWindow::on_btnCloud_clicked()
     this->ui->renderArea->repaint(this->rect());
     update_ui();
 }
+
+void MainWindow::on_btnReverseCloud_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::ReverseCloud);
+    this->ui->renderArea->repaint(this->rect());
+    update_ui();
+}

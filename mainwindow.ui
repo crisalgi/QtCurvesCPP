@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>630</width>
-    <height>532</height>
+    <width>577</width>
+    <height>477</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,8 +25,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>321</width>
-      <height>371</height>
+      <width>371</width>
+      <height>441</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -82,10 +82,10 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>389</x>
       <y>10</y>
       <width>169</width>
-      <height>408</height>
+      <height>439</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -156,6 +156,13 @@
       <widget class="QPushButton" name="btnCloud">
        <property name="text">
         <string>Cloud</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnReverseCloud">
+       <property name="text">
+        <string>Reverse Cloud</string>
        </property>
       </widget>
      </item>
