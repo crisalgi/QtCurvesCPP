@@ -113,3 +113,10 @@ void MainWindow::on_btnStarfish_clicked()
     this->ui->renderArea->repaint(this->rect());
     update_ui();
 }
+
+void MainWindow::on_btnCloud_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::Cloud);
+    this->ui->renderArea->repaint(this->rect());
+    update_ui();
+}

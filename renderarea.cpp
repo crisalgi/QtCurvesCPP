@@ -46,10 +46,17 @@ QPointF RenderArea::compute_ellipse(float t){
     return QPointF(x,y);
 }
 
-QPointF RenderArea::compute_Starfish(float t){
+QPointF RenderArea::compute_starfish(float t){
     int R = 5, r=3, d=5;
     float x = (R-r)*cos(t)+d*cos(t*(R-r)/r);
     float y = (R-r)*sin(t)-d*sin(t*(R-r)/r);
+    return QPointF(x,y);
+}
+
+QPointF RenderArea::compute_cloud(float t){
+    float a = 14, b=1;
+    float x = (a+b)*cos(t*b/a)-b*cos(t*(a+b)/a);
+    float y = (a+b)*sin(t*b/a)-b*sin(t*(a+b)/a);
     return QPointF(x,y);
 }
 
@@ -88,7 +95,10 @@ QPointF RenderArea::compute(float t){
        return compute_fancy(t);
         break;
     case Starfish:
-       return compute_Starfish(t);
+       return compute_starfish(t);
+        break;
+    case Cloud:
+       return compute_cloud(t);
         break;
 
     }
@@ -170,6 +180,11 @@ void RenderArea::on_shape_changed(){
         mScale = 22;
         mIntervalLength = 6 * M_PI;
         mStepCount = 256;
+        break;
+    case Cloud:
+        mScale = 10;
+        mIntervalLength = 28 * M_PI;
+        mStepCount = 128;
         break;
     }
 }

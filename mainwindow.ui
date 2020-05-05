@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>524</width>
-    <height>415</height>
+    <width>630</width>
+    <height>532</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,7 +20,7 @@
    <string>Curves</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -82,10 +82,10 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>341</x>
-      <y>9</y>
+      <x>340</x>
+      <y>10</y>
       <width>169</width>
-      <height>377</height>
+      <height>408</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -149,6 +149,13 @@
       <widget class="QPushButton" name="btnStarfish">
        <property name="text">
         <string>Starfish</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCloud">
+       <property name="text">
+        <string>Cloud</string>
        </property>
       </widget>
      </item>
