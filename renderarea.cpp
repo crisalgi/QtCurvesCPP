@@ -197,6 +197,18 @@ void RenderArea::on_shape_changed(){
     }
 }
 
+void RenderArea::startAnimation(){
+    mShape = this->getShape();
+    int ms = 10;
+    struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
+
+    for(float i = 0; i<= 0.1+this->getInterval();i+=0.1){
+        this->setInterval(i);
+        this->setShape(mShape);
+        nanosleep(&ts,NULL);
+    }
+}
+
 void RenderArea::paintEvent(QPaintEvent *event)
 {
    Q_UNUSED(event);

@@ -127,3 +127,8 @@ void MainWindow::on_btnReverseCloud_clicked()
     this->ui->renderArea->repaint(this->rect());
     update_ui();
 }
+
+void MainWindow::on_bntAnimation_clicked()
+{
+    this->ui->renderArea->startAnimation();
+}

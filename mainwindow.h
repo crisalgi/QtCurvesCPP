@@ -50,6 +50,8 @@ private slots:
 
     void on_btnReverseCloud_clicked();
 
+    void on_bntAnimation_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

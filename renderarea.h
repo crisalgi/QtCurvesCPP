@@ -29,6 +29,7 @@ public:
     float getInterval() const {return mIntervalLength;}
     void setStepCount(float count){mStepCount = count; repaint();}
     float getStepCount() const {return mStepCount;}
+    void startAnimation();
 
 protected:
     void paintEvent(QPaintEvent *event) override;

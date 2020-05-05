@@ -49,6 +49,13 @@
         </spacer>
        </item>
        <item>
+        <widget class="QPushButton" name="bntAnimation">
+         <property name="text">
+          <string>Animation</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="btnBackground">
          <property name="text">
           <string>Background</string>
